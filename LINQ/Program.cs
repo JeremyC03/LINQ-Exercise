@@ -4,7 +4,14 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<string> list = new List<string>() { "Halo", "Final Fantasy", "Gears of War", "Kingdom Hearts" };
+
+            var gameNameLength = list.OrderBy(x => x.Length);
+
+            foreach (string game in gameNameLength)
+            {
+                Console.WriteLine(game);
+            }
         }
     }
 }
